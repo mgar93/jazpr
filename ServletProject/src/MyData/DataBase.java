@@ -1,3 +1,4 @@
+package MyData;
 import java.util.*;
 
 public class DataBase
@@ -9,7 +10,21 @@ public class DataBase
 		User target = null;
 		for(User u : users)
 		{
-			if(u.login == login)
+			if(u.login.equals(login))
+			{
+				target = u;
+				break;
+			}
+		}
+		return target;
+	}
+	
+	public static User getUserById(int id)
+	{
+		User target = null;
+		for(User u : users)
+		{
+			if(u.id == id)
 			{
 				target = u;
 				break;

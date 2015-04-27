@@ -8,10 +8,12 @@
 </head>
 <body>
 <h3>Login</h3>
-<form action="First">
+<p style="color:<%= request.getParameter("color") != null ? request.getParameter("color") : "black" %>;"><%= request.getParameter("message") != null? request.getParameter("message") : "" %></p>
+<form method="post" action="LoginServlet">
 username:<input type="text" name="name"><br>
 password:<input type="password" name="pass"><br>
 <input type="submit">
 </form>
+<a href="index.jsp">back</a><br>
 </body>
 </html>

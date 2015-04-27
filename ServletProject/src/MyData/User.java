@@ -1,3 +1,5 @@
+package MyData;
+
 public class User 
 {
 	public static int lastId;
@@ -6,12 +8,10 @@ public class User
 	public String login;
 	public String password;
 	public String email;
-	public boolean premium;
+	public UserRole role;
 	
 	public User()
 	{
 		id = ++lastId;
 	}
-	
-	
 }
